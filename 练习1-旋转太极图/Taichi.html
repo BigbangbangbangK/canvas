@@ -94,3 +94,22 @@
 </body>
 
 </html>
+
+<script>
+    context.clearRect(x, y, width, height);
+
+
+    context.arc(x, y, radius, Math.PI / 180 * startAngle, Math.PI / 180 * endAngle, anticlockwise);
+
+    context.translate(x, y);
+    context.rotate(Math.PI / 180 * degree);
+    context.scale(x, y);
+    context.transform(a, b, c, d, e, f);
+    context.setTransform(a, b, c, d, e, f)
+    // a 水平旋转绘图
+    // b 水平倾斜绘图
+    // c 垂直倾斜绘图
+    // d 垂直缩放绘图
+    // e 水平移动绘图
+    // f 垂直移动绘图
+</script>
