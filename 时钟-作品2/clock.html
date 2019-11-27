@@ -11,6 +11,10 @@
             background: #2c2c54;
         }
 
+        a {
+            color: #fff;
+        }
+
         h1 {
             text-align: center;
         }
@@ -24,13 +28,16 @@
 </head>
 
 <body>
+    <a href="../index.html">
+        <h2>首页</h2>
+    </a>
     <h1>时钟</h1>
     <canvas id="clock" width="600" height="600"></canvas>
 
 
     <script>
         window.onload = function () {
-            var clock = document.querySelector('#clock');
+            var clock = document.querySelector(' #clock');
             var context = clock.getContext('2d');
 
             function clockfn() {
@@ -39,39 +46,37 @@
                 var time = new Date();
                 var h = time.getHours();
                 var m = time.getMinutes();
-                var s = time.getSeconds();
-
-                //将小时转成小数，并换算成12个小时
+                var s = time.getSeconds(); //将小时转成小数，并换算成12个小时 
                 h = h + m / 60;
                 h = h > 12 ? h - 12 : h;
 
                 function star() {
                     for (var i = 0; i < 20; i++) {
                         var starx = Math.round(Math.random() * 600);
-                        var stary = Math.round(Math.random() * 600);
+                        var stary = Math.round(Math.random() *
+                            600);
                         context.strokeRect(starx, stary, 1, 1);
                         context.strokeStyle = '#74b9ff';
-
                     }
-
                 }
-                //时钟盘
+
+                //时钟盘 
                 context.beginPath();
                 context.arc(300, 300, 250, 0, Math.PI * 2);
                 context.lineWidth = 3;
                 context.fillStyle = '#2c2c54';
-
                 context.fill();
                 context.stroke();
                 context.closePath();
 
-                //分钟刻度线
+                //分钟刻度线 
                 for (i = 0; i < 60; i++) {
                     context.save();
                     context.beginPath();
                     context.translate(300, 300);
                     context.rotate(Math.PI / 180 * 6 * i);
-                    context.moveTo(0, -240);
+                    context.moveTo(0,
+                        -240);
                     context.lineTo(0, -250);
                     context.lineWidth = 5;
                     context.strokeStyle = '#3ae374';
@@ -79,15 +84,14 @@
                     context.closePath();
                     context.restore();
                 }
-
-                //时钟刻度线
+                //时钟刻度线 
                 for (i = 0; i < 12; i++) {
                     context.save();
                     context.beginPath();
                     context.translate(300, 300);
-                    context.rotate(Math.PI /
-                        180 * 30 * i);
-                    context.moveTo(0, -230);
+                    context.rotate(Math.PI / 180 * 30 * i);
+                    context.moveTo(0,
+                        -230);
                     context.lineTo(0, -250);
                     context.lineWidth = 8;
                     context.strokeStyle = '#32ff7e';
@@ -95,7 +99,6 @@
                     context.closePath();
                     context.restore();
                 }
-
 
                 // 时针 
                 context.save();
@@ -110,7 +113,7 @@
                 context.closePath();
                 context.restore();
 
-                // 分针
+                // 分针 
                 context.save();
                 context.beginPath();
                 context.translate(300, 300);
@@ -119,12 +122,11 @@
                 context.lineTo(0, -220);
                 context.lineWidth = 6;
                 context.strokeStyle = '#7efff5';
-
                 context.stroke();
                 context.closePath();
                 context.restore();
 
-                // 秒针 
+                // 秒针
                 context.save();
                 context.beginPath();
                 context.translate(300, 300);
@@ -133,22 +135,13 @@
                 context.lineTo(0, -225);
                 context.lineWidth = 4;
                 context.strokeStyle = '#7efff5';
-
                 context.stroke();
                 context.closePath();
                 context.restore();
-                star()
-
+                star();
             }
-            clockfn()
-            setInterval(clockfn, 1000)
-
-
-
-
-
-
-
+            clockfn();
+            setInterval(clockfn, 1000);
         }
     </script>
 </body>
