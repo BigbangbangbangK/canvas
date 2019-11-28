@@ -1,6 +1,6 @@
 # Canvas
  
-## 作品集
+## 项目展示
 
 <h1><a href="https://bigbangbangbangk.github.io/canvas/index.html" style="font-size=30px">旋转太极图-时钟-贪吃蛇<-----------点击</a></h1>
   
