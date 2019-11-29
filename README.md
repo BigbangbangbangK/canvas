@@ -1,8 +1,6 @@
 # Canvas
  
-## 项目展示
-
-<h1><a href="https://bigbangbangbangk.github.io/canvas/index.html" style="font-size=30px">旋转太极图-时钟-贪吃蛇<-----------点击</a></h1>
+## 项目展示<a href="https://bigbangbangbangk.github.io/canvas/index.html" style="font-size=30px"> 旋转太极图-时钟-贪吃蛇</a>
   
   1. HTML5`<canvas>`标签用于绘制图像
   2. `<canvas>`元素本身并没有绘制能力（它仅仅是图形的容器） - 您必须使用脚本js来完成实际的绘图任务。  
